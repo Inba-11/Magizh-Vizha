@@ -1,27 +1,7 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
-  const [showTamil, setShowTamil] = useState(false);
-
-  useEffect(() => {
-    let timeoutId: number | undefined;
-
-    const scheduleNext = () => {
-      const nextMs = 8000 + Math.floor(Math.random() * 4001); // 8000–12000ms
-      timeoutId = window.setTimeout(() => {
-        setShowTamil((v) => !v);
-        scheduleNext();
-      }, nextMs);
-    };
-
-    scheduleNext();
-    return () => {
-      if (timeoutId) window.clearTimeout(timeoutId);
-    };
-  }, []);
-
   const titleBase =
     "font-display text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none sm:whitespace-nowrap";
 
@@ -58,10 +38,8 @@ const HeroSection = () => {
           <h1
             className={[
               titleBase,
-              "col-start-1 row-start-1 w-full text-center transition-all duration-1200 ease-in-out",
-              showTamil ? "opacity-0 -translate-y-1 pointer-events-none" : "opacity-100 translate-y-0",
+              "hero-title-en col-start-1 row-start-1 w-full text-center",
             ].join(" ")}
-            aria-hidden={showTamil}
           >
             Magizh Vizha.
           </h1>
@@ -70,11 +48,9 @@ const HeroSection = () => {
             className={[
               titleBase,
               "font-tamil",
-              "text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem]",
-              "col-start-1 row-start-1 w-full text-center transition-all duration-1200 ease-in-out",
-              showTamil ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none",
+              "text-4xl sm:text-6xl md:text-7xl lg:text-[6.5rem]",
+              "hero-title-ta col-start-1 row-start-1 w-full text-center",
             ].join(" ")}
-            aria-hidden={!showTamil}
           >
             மகிழ்விழா
           </h1>
@@ -86,7 +62,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}
-        className="font-serif text-lg md:text-2xl text-maroon/90 mb-6"
+        className="font-serif font-medium text-lg md:text-2xl text-maroon/90 mb-2 md:mb-4"
         style={{ opacity: 1 }}
       >
         We craft what you love
