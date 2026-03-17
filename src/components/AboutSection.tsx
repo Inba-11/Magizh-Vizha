@@ -33,18 +33,6 @@ const AboutSection = () => (
             From concept to execution, we bring a fresh, modern perspective to celebrations — blending timeless
             elegance with contemporary creativity that makes every moment extraordinary.
           </p>
-          <div className="grid grid-cols-3 gap-4 text-center">
-            {[
-              { num: "100+", label: "Events" },
-              { num: "50+", label: "Happy Clients" },
-              { num: "5+", label: "Years" },
-            ].map((s) => (
-              <div key={s.label} className="glass rounded-xl p-4">
-                <div className="font-heading text-2xl text-primary">{s.num}</div>
-                <div className="font-body text-xs text-muted-foreground">{s.label}</div>
-              </div>
-            ))}
-          </div>
         </AnimatedSection>
       </div>
     </div>

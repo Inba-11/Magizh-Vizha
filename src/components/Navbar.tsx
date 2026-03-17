@@ -32,9 +32,32 @@ const Navbar = () => {
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => handleClick("#home")} className="flex items-center gap-1">
-          <span className="font-display text-2xl md:text-3xl font-black text-maroon tracking-tight">Magizh Vizha</span>
-          <span className="text-maroon/60 text-xs -mt-3">✦</span>
+        {/* Logo — masked to show only the lettering in maroon, absolutely positioned so it never affects navbar */}
+        <button
+          onClick={() => handleClick("#home")}
+          className="relative flex items-center h-10 md:h-12"
+          style={{ minWidth: '320px' }}
+        >
+          {/* Invisible image to hold the natural aspect ratio */}
+          <img
+            src="/logo.png"
+            alt="Magizh Vizha"
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-[11rem] md:h-[14rem] w-auto opacity-0 pointer-events-none"
+          />
+          {/* Maroon-filled shape using the logo as a mask — looks like text */}
+          <div
+            className="absolute left-0 top-1/2 -translate-y-1/2 h-[11rem] md:h-[14rem] w-[20rem] md:w-[24rem] bg-maroon transition-all duration-300 hover:opacity-80"
+            style={{
+              maskImage: 'url(/logo.png)',
+              WebkitMaskImage: 'url(/logo.png)',
+              maskSize: 'contain',
+              WebkitMaskSize: 'contain',
+              maskRepeat: 'no-repeat',
+              WebkitMaskRepeat: 'no-repeat',
+              maskPosition: 'left center',
+              WebkitMaskPosition: 'left center',
+            }}
+          />
         </button>
 
         {/* Desktop */}

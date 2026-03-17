@@ -14,58 +14,66 @@ const HeroSection = () => (
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/20 to-background/80" />
     </div>
 
-    {/* Glass card */}
+    {/* Glass card — matching the screenshot perfectly */}
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative z-10 text-center max-w-3xl mx-6 glass rounded-2xl p-10 md:p-16"
+      className="relative z-10 text-center w-full max-w-3xl mx-6 glass rounded-[2rem] px-8 py-10 md:px-16 md:py-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+      style={{ background: 'rgba(251, 245, 238, 0.85)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', opacity: 1, transform: 'none' }}
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="flex flex-col items-center mb-4"
+        className="flex flex-col items-center mb-0 md:mb-2"
+        style={{ opacity: 1, transform: 'none' }}
       >
-        <span className="text-maroon/50 text-sm mb-1">✦</span>
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-black text-maroon tracking-tight leading-tight">
+        <span className="text-maroon/60 text-lg mb-6 leading-none">✦</span>
+        <h1 className="font-display text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none mb-4 whitespace-nowrap">
           Magizh Vizha.
         </h1>
       </motion.div>
 
+      {/* Tagline */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-        className="font-heading text-lg md:text-2xl text-foreground/90 mb-3"
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className="font-serif text-lg md:text-2xl text-maroon/90 mb-6"
+        style={{ opacity: 1 }}
       >
         Celebration, Curated to Perfection ✨
       </motion.p>
 
+      {/* Description */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.8 }}
-        className="font-body text-sm md:text-base text-muted-foreground mb-8 max-w-xl mx-auto"
+        transition={{ delay: 0.7, duration: 0.8 }}
+        className="font-body text-sm md:text-[15px] text-foreground/80 mb-10 max-w-[550px] mx-auto leading-relaxed"
+        style={{ opacity: 1 }}
       >
         We are a multidisciplinary team turning happiness into extraordinary celebrations. Every moment deserves to be experienced fully, beautifully, and memorably.
       </motion.p>
 
+      {/* Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.6 }}
-        className="flex flex-col sm:flex-row gap-4 justify-center"
+        transition={{ delay: 0.9, duration: 0.6 }}
+        className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        style={{ opacity: 1, transform: 'none' }}
       >
         <a
           href="#portfolio"
-          className="px-8 py-3 rounded-full bg-maroon text-white font-body font-semibold text-sm hover-squishy shadow-lg"
+          className="px-8 py-3.5 rounded-full bg-maroon text-white font-body font-semibold text-sm hover-squishy shadow-lg transition-all"
         >
           Discover Our Work
         </a>
         <a
           href="#contact"
-          className="px-8 py-3 rounded-full border-2 border-primary text-foreground font-body font-semibold text-sm hover-squishy hover:bg-primary/10"
+          className="px-8 py-3.5 rounded-full border border-maroon text-maroon font-body font-semibold text-sm hover-squishy hover:bg-maroon/5 transition-all border-[1.5px]"
         >
           Plan Your Celebration
         </a>
