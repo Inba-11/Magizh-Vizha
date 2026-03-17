@@ -747,8 +747,8 @@ const ContactSection = () => {
                 },
                 {
                   icon: Instagram,
-                  label: "DM on Instagram",
-                  value: "Instagram Direct",
+                  label: "Instagram",
+                  value: "@magizhvizha",
                   href: "https://www.instagram.com/magizhvizha/",
                 },
               ].map((c) => (

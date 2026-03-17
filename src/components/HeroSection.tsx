@@ -48,11 +48,11 @@ const HeroSection = () => {
             className={[
               titleBase,
               "font-tamil",
-              "text-4xl sm:text-6xl md:text-7xl lg:text-[6.5rem]",
+              "text-2xl sm:text-4xl md:text-5xl lg:text-[4.5rem]",
               "hero-title-ta col-start-1 row-start-1 w-full text-center",
             ].join(" ")}
           >
-            மகிழ்விழா
+            மகிழ்விழா.
           </h1>
         </div>
       </motion.div>

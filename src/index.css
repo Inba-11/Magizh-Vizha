@@ -101,33 +101,45 @@
 
 /* Hero title: cinematic fade out → pause → fade in */
 @keyframes heroTitleEn {
+
   0%,
-  35% {
+  30% {
     opacity: 1;
   }
-  45%,
-  100% {
+
+  50%,
+  80% {
     opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes heroTitleTa {
+
   0%,
-  45% {
+  30% {
     opacity: 0;
   }
-  55%,
-  100% {
+
+  50%,
+  80% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
 .hero-title-en {
-  animation: heroTitleEn 10s ease-in-out infinite;
+  animation: heroTitleEn 24s ease-in-out infinite;
 }
 
 .hero-title-ta {
-  animation: heroTitleTa 10s ease-in-out infinite;
+  animation: heroTitleTa 24s ease-in-out infinite;
 }
 
 /* Smooth scroll */
