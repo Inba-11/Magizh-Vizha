@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, []);
 
   const titleBase =
-    "font-display text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none whitespace-nowrap";
+    "font-display text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none sm:whitespace-nowrap";
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
