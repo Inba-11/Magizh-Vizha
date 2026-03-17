@@ -15,6 +15,7 @@ export default {
         display: ['"Playfair Display"', 'serif'],
         heading: ['"Playfair Display"', 'serif'],
         body: ['"DM Sans"', 'sans-serif'],
+        tamil: ['"Tiro Tamil"', "serif"],
       },
       colors: {
         border: "hsl(var(--border))",

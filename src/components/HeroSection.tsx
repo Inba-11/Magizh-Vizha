@@ -1,8 +1,32 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 
-const HeroSection = () => (
-  <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+const HeroSection = () => {
+  const [showTamil, setShowTamil] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+
+    const scheduleNext = () => {
+      const nextMs = 5000 + Math.floor(Math.random() * 3001); // 5000–8000ms
+      timeoutId = window.setTimeout(() => {
+        setShowTamil((v) => !v);
+        scheduleNext();
+      }, nextMs);
+    };
+
+    scheduleNext();
+    return () => {
+      if (timeoutId) window.clearTimeout(timeoutId);
+    };
+  }, []);
+
+  const titleBase =
+    "font-display text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none whitespace-nowrap";
+
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     {/* Background */}
     <div className="absolute inset-0">
       <img
@@ -30,9 +54,30 @@ const HeroSection = () => (
         style={{ opacity: 1, transform: 'none' }}
       >
         <span className="text-maroon/60 text-lg mb-6 leading-none">✦</span>
-        <h1 className="font-display text-6xl md:text-7xl lg:text-[6.5rem] font-black text-maroon tracking-tight leading-none mb-4 whitespace-nowrap">
-          Magizh Vizha.
-        </h1>
+        <div className="mb-4 grid w-full min-h-[1.3em] place-items-center">
+          <h1
+            className={[
+              titleBase,
+              "col-start-1 row-start-1 w-full text-center transition-all duration-700 ease-in-out",
+              showTamil ? "opacity-0 -translate-y-1 pointer-events-none" : "opacity-100 translate-y-0",
+            ].join(" ")}
+            aria-hidden={showTamil}
+          >
+            Magizh Vizha.
+          </h1>
+
+          <h1
+            className={[
+              titleBase,
+              "font-tamil",
+              "col-start-1 row-start-1 w-full text-center transition-all duration-700 ease-in-out",
+              showTamil ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none",
+            ].join(" ")}
+            aria-hidden={!showTamil}
+          >
+            மகிழ்விழா
+          </h1>
+        </div>
       </motion.div>
 
       {/* Tagline */}
@@ -43,7 +88,7 @@ const HeroSection = () => (
         className="font-serif text-lg md:text-2xl text-maroon/90 mb-6"
         style={{ opacity: 1 }}
       >
-        Celebration, Curated to Perfection ✨
+        Celebration, Curated to Perfection
       </motion.p>
 
       {/* Description */}
@@ -91,6 +136,7 @@ const HeroSection = () => (
       </div>
     </motion.div>
   </section>
-);
+  );
+};
 
 export default HeroSection;

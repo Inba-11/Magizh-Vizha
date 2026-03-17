@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="bg-charcoal py-12 px-6">
     <div className="max-w-7xl mx-auto text-center">
       <p className="font-display text-3xl font-black text-white mb-4 tracking-tight">Magizh Vizha<span className="text-white/50">.</span></p>
-      <p className="font-body text-sm text-primary-foreground/60 mb-6">Crafting Timeless Celebrations</p>
+      <p className="font-body text-sm text-primary-foreground/60 mb-6">We craft what you love!</p>
 
       <div className="flex justify-center gap-4 mb-8">
         {[
@@ -24,7 +24,7 @@ const Footer = () => (
 
       <div className="border-t border-primary/15 pt-6">
         <p className="font-body text-xs text-primary-foreground/40">
-          © 2026 MagizhVizha | Crafting Timeless Celebrations
+          © 2026 MagizhVizha | We craft what you love!
         </p>
       </div>
     </div>

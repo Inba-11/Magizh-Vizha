@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, Phone, MessageCircle, Send, ArrowUp, CheckCircle2, CalendarDays } from "lucide-react";
+import { Mail, Phone, MessageCircle, Instagram, Send, ArrowUp, CheckCircle2, CalendarDays } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 // ── Google Sheets endpoint (Apps Script web app URL) ────────────────────────
@@ -744,6 +744,12 @@ const ContactSection = () => {
                   label: "Chat on WhatsApp",
                   value: "+91-9080791218",
                   href: "https://wa.me/919080791218?text=Hi%20MagizhVizha!%20I%27d%20like%20to%20plan%20a%20celebration.",
+                },
+                {
+                  icon: Instagram,
+                  label: "DM on Instagram",
+                  value: "Instagram Direct",
+                  href: "https://www.instagram.com/direct/t/18065103797321659/",
                 },
               ].map((c) => (
                 <a

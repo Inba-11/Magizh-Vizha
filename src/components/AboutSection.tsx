@@ -23,7 +23,7 @@ const AboutSection = () => (
 
         <AnimatedSection delay={0.4}>
           <h3 className="font-heading text-xl md:text-2xl text-foreground mb-4">
-            We are MagizhVizha ✨
+            We are MagizhVizha
           </h3>
           <p className="font-body text-muted-foreground leading-relaxed mb-6">
             A creative team passionate about transforming joy into memorable, beautifully curated celebrations.
