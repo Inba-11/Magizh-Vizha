@@ -9,7 +9,7 @@ const HeroSection = () => {
     let timeoutId: number | undefined;
 
     const scheduleNext = () => {
-      const nextMs = 5000 + Math.floor(Math.random() * 3001); // 5000–8000ms
+      const nextMs = 8000 + Math.floor(Math.random() * 4001); // 8000–12000ms
       timeoutId = window.setTimeout(() => {
         setShowTamil((v) => !v);
         scheduleNext();
@@ -58,7 +58,7 @@ const HeroSection = () => {
           <h1
             className={[
               titleBase,
-              "col-start-1 row-start-1 w-full text-center transition-all duration-700 ease-in-out",
+              "col-start-1 row-start-1 w-full text-center transition-all duration-1200 ease-in-out",
               showTamil ? "opacity-0 -translate-y-1 pointer-events-none" : "opacity-100 translate-y-0",
             ].join(" ")}
             aria-hidden={showTamil}
@@ -71,7 +71,7 @@ const HeroSection = () => {
               titleBase,
               "font-tamil",
               "text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem]",
-              "col-start-1 row-start-1 w-full text-center transition-all duration-700 ease-in-out",
+              "col-start-1 row-start-1 w-full text-center transition-all duration-1200 ease-in-out",
               showTamil ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none",
             ].join(" ")}
             aria-hidden={!showTamil}
@@ -89,7 +89,7 @@ const HeroSection = () => {
         className="font-serif text-lg md:text-2xl text-maroon/90 mb-6"
         style={{ opacity: 1 }}
       >
-        Celebration, Curated to Perfection
+        We craft what you love
       </motion.p>
 
       {/* Description */}
