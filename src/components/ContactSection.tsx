@@ -749,7 +749,7 @@ const ContactSection = () => {
                   icon: Instagram,
                   label: "DM on Instagram",
                   value: "Instagram Direct",
-                  href: "https://www.instagram.com/direct/t/18065103797321659/",
+                  href: "https://www.instagram.com/magizhvizha/",
                 },
               ].map((c) => (
                 <a
@@ -770,7 +770,7 @@ const ContactSection = () => {
               ))}
 
               <div className="glass rounded-2xl p-6">
-                <p className="font-heading text-sm text-foreground mb-1">📍 Location</p>
+                <p className="font-heading font-semibold text-sm text-foreground mb-1">Location</p>
                 <p className="font-body text-sm text-muted-foreground">
                   Coimbatore | Serving Across Tamil Nadu
                 </p>

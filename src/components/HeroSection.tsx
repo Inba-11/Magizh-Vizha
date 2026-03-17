@@ -70,6 +70,7 @@ const HeroSection = () => {
             className={[
               titleBase,
               "font-tamil",
+              "text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem]",
               "col-start-1 row-start-1 w-full text-center transition-all duration-700 ease-in-out",
               showTamil ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1 pointer-events-none",
             ].join(" ")}
