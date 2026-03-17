@@ -43,7 +43,7 @@ const HeroSection = () => {
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="relative z-10 text-center w-full max-w-3xl mx-6 glass rounded-[2rem] px-8 py-10 md:px-16 md:py-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
+      className="relative z-10 text-center w-full max-w-[22rem] sm:max-w-3xl mx-4 sm:mx-6 glass rounded-[2rem] px-6 py-8 sm:px-8 sm:py-10 md:px-16 md:py-14 shadow-[0_20px_50px_rgba(0,0,0,0.1)]"
       style={{ background: 'rgba(251, 245, 238, 0.85)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', opacity: 1, transform: 'none' }}
     >
       <motion.div
