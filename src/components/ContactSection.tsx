@@ -729,31 +729,31 @@ const ContactSection = () => {
               {[
                 {
                   icon: Mail,
-                  label: "Email Us",
+                  label: "",
                   value: "magizhvizha@gmail.com",
                   href: "https://mail.google.com/mail/?view=cm&to=magizhvizha@gmail.com",
                 },
                 {
                   icon: Phone,
-                  label: "Call Us",
-                  value: "+91-9080791218",
+                  label: "",
+                  value: "+91 90807 91218",
                   href: "tel:+919080791218",
                 },
                 {
                   icon: MessageCircle,
-                  label: "Chat on WhatsApp",
-                  value: "+91-9080791218",
+                  label: "",
+                  value: "Chat on WhatsApp",
                   href: "https://wa.me/919080791218?text=Hi%20MagizhVizha!%20I%27d%20like%20to%20plan%20a%20celebration.",
                 },
                 {
                   icon: Instagram,
-                  label: "Instagram",
+                  label: "",
                   value: "@magizhvizha",
                   href: "https://www.instagram.com/magizhvizha/",
                 },
-              ].map((c) => (
+              ].map((c, idx) => (
                 <a
-                  key={c.label}
+                  key={idx}
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
                   rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -763,7 +763,7 @@ const ContactSection = () => {
                     <c.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-heading text-sm text-foreground">{c.label}</p>
+                    {c.label && <p className="font-heading text-sm text-foreground">{c.label}</p>}
                     <p className="font-body text-sm text-muted-foreground">{c.value}</p>
                   </div>
                 </a>
