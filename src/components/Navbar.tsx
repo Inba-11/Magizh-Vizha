@@ -36,27 +36,11 @@ const Navbar = () => {
         <button
           onClick={() => handleClick("#home")}
           className="relative flex items-center h-10 md:h-12"
-          style={{ minWidth: '320px' }}
         >
-          {/* Invisible image to hold the natural aspect ratio */}
           <img
             src="/logo.png"
             alt="Magizh Vizha"
-            className="absolute left-0 top-1/2 -translate-y-1/2 h-[11rem] md:h-[14rem] w-auto opacity-0 pointer-events-none"
-          />
-          {/* Maroon-filled shape using the logo as a mask — looks like text */}
-          <div
-            className="absolute left-0 top-1/2 -translate-y-1/2 h-[11rem] md:h-[14rem] w-[20rem] md:w-[24rem] bg-maroon transition-all duration-300 hover:opacity-80"
-            style={{
-              maskImage: 'url(/logo.png)',
-              WebkitMaskImage: 'url(/logo.png)',
-              maskSize: 'contain',
-              WebkitMaskSize: 'contain',
-              maskRepeat: 'no-repeat',
-              WebkitMaskRepeat: 'no-repeat',
-              maskPosition: 'left center',
-              WebkitMaskPosition: 'left center',
-            }}
+            className="h-[3.5rem] md:h-[4rem] w-auto rounded-full transition-all duration-300 hover:opacity-80"
           />
         </button>
 
